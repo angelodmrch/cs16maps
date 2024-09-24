@@ -36,32 +36,32 @@ Using mapfile wad configuration
 Wadinclude list :
 [zhlt.wad]
 
-64 brushes (totalling 448 sides) discarded from clipping hulls
+62 brushes (totalling 434 sides) discarded from clipping hulls
 CreateBrush:
  (0.06 seconds)
 SetModelCenters:
  (0.00 seconds)
 CSGBrush:
- (0.09 seconds)
+ (0.13 seconds)
 
 Using Wadfile: \steamlibrary\steamapps\common\half-life\cstrike\cached.wad
  - Contains 0 used textures, 0.00 percent of map (2 textures in wad)
 Using Wadfile: \steamlibrary\steamapps\common\half-life\cstrike\cs_assault.wad
- - Contains 2 used textures, 6.67 percent of map (22 textures in wad)
+ - Contains 2 used textures, 5.88 percent of map (22 textures in wad)
 Using Wadfile: \steamlibrary\steamapps\common\half-life\cstrike\cs_office.wad
- - Contains 6 used textures, 20.00 percent of map (102 textures in wad)
+ - Contains 6 used textures, 17.65 percent of map (102 textures in wad)
 Using Wadfile: \steamlibrary\steamapps\common\half-life\cstrike\de_piranesi.wad
- - Contains 1 used texture, 3.33 percent of map (160 textures in wad)
+ - Contains 1 used texture, 2.94 percent of map (160 textures in wad)
 Using Wadfile: \steamlibrary\steamapps\common\half-life\valve\halflife.wad
- - Contains 20 used textures, 66.67 percent of map (3116 textures in wad)
+ - Contains 24 used textures, 70.59 percent of map (3116 textures in wad)
 Using Wadfile: \steamlibrary\steamapps\common\half-life\cstrike\de_airstrip.wad
  - Contains 0 used textures, 0.00 percent of map (69 textures in wad)
 
-added 1 additional animating textures.
+added 3 additional animating textures.
 Warning: ::FindTexture() texture MONSIDE not found!
 Warning: ::LoadLump() texture MONSIDE not found!
-Texture usage is at 0.31 mb (of 4.00 mb MAX)
-0.66 seconds elapsed
+Texture usage is at 0.39 mb (of 4.00 mb MAX)
+0.68 seconds elapsed
 
 -----   END   hlcsg -----
 
@@ -96,31 +96,12 @@ subdivide size      [     240 ] [     240 ] (Min 64) (Max 512)
 max node size       [    1024 ] [    1024 ] (Min 64) (Max 8192)
 
 
-SolidBSP [hull 0] 500...1000...1500...1563 (0.03 seconds)
-Warning: === LEAK in hull 0 ===
-Entity info_bomb_target @ (-232,-204,-212)
-Error: 
-  A LEAK is a hole in the map, where the inside of it is exposed to the
-(unwanted) outside region.  The entity listed in the error is just a helpful
-indication of where the beginning of the leak pointfile starts, so the
-beginning of the line can be quickly found and traced to until reaching the
-outside. Unless this entity is accidentally on the outside of the map, it
-probably should not be deleted.  Some complex rotating objects entities need
-their origins outside the map.  To deal with these, just enclose the origin
-brush with a solid world brush
-
-Leak pointfile generated
-
-SolidBSP [hull 1] 478 (0.01 seconds)
-Warning: === LEAK in hull 1 ===
-Entity info_player_start @ ( 374, -50,-192)
-SolidBSP [hull 2] 410 (0.01 seconds)
-Warning: === LEAK in hull 2 ===
-Entity info_bomb_target @ (-232,-204,-212)
-SolidBSP [hull 3] 469 (0.01 seconds)
-Warning: === LEAK in hull 3 ===
-Entity info_map_parameters @ (1632, 448, 224)
-0.66 seconds elapsed
+SolidBSP [hull 0] 500...1000...1500...2000...2160 (0.04 seconds)
+BSP generation successful, writing portal file 'd:\maps\de_live.prt'
+SolidBSP [hull 1] 500...1000...1159 (0.02 seconds)
+SolidBSP [hull 2] 500...1000...1164 (0.02 seconds)
+SolidBSP [hull 3] 500...1000...1216 (0.02 seconds)
+0.82 seconds elapsed
 
 -----   END   hlbsp -----
 
@@ -133,8 +114,33 @@ Based on Valve's version, modified with permission.
 Submit detailed bug reports to (amckern@yahoo.com)
 -----  BEGIN  hlvis -----
 Command line: D:\ValveHammerEditor35\tools\hlvis.exe d:\maps\de_live 
->> There was a problem compiling the map.
->> Check the file d:\maps\de_live.log for the cause.
+1225 portalleafs
+3411 numportals
+
+-= Current hlvis Settings =-
+Name               |  Setting  |  Default
+-------------------|-----------|-------------------------
+threads             [      12 ] [  Varies ]
+verbose             [     off ] [     off ]
+log                 [      on ] [      on ]
+developer           [       0 ] [       0 ]
+chart               [     off ] [     off ]
+estimate            [     off ] [     off ]
+max texture memory  [ 4194304 ] [ 4194304 ]
+max vis distance    [       0 ] [       0 ]
+priority            [  Normal ] [  Normal ]
+
+fast vis            [     off ] [     off ]
+full vis            [     off ] [     off ]
+
+
+BasePortalVis:
+ (0.09 seconds)
+LeafThread:
+ (19.39 seconds)
+average leafs visible: 433
+g_visdatasize:147434  compressed from 188650
+19.49 seconds elapsed
 
 -----   END   hlvis -----
 
@@ -147,8 +153,88 @@ Based on Valve's version, modified with permission.
 Submit detailed bug reports to (amckern@yahoo.com)
 -----  BEGIN  hlrad -----
 Command line: D:\ValveHammerEditor35\tools\hlrad.exe d:\maps\de_live 
->> There was a problem compiling the map.
->> Check the file d:\maps\de_live.log for the cause.
+
+-= Current hlrad Settings =-
+Name                | Setting             | Default
+--------------------|---------------------|-------------------------
+threads              [                12 ] [            Varies ]
+verbose              [               off ] [               off ]
+log                  [                on ] [                on ]
+developer            [                 0 ] [                 0 ]
+chart                [               off ] [               off ]
+estimate             [               off ] [               off ]
+max texture memory   [           4194304 ] [           4194304 ]
+max lighting memory  [           6291456 ] [           6291456 ]
+priority             [            Normal ] [            Normal ]
+
+vismatrix algorithm  [          Original ] [          Original ]
+oversampling (-extra)[               off ] [               off ]
+bounces              [                 1 ] [                 1 ]
+bounce dynamic light [                on ] [                on ]
+ambient light        [ 0.000 0.000 0.000 ] [ 0.000 0.000 0.000 ]
+maximum light        [           255.000 ] [           256.000 ]
+circus mode          [               off ] [               off ]
+
+smoothing threshold  [            50.000 ] [            50.000 ]
+direct threshold     [            25.000 ] [            25.000 ]
+direct light scale   [             2.000 ] [             2.000 ]
+coring threshold     [             1.000 ] [             1.000 ]
+patch interpolation  [                on ] [                on ]
+
+texscale             [                on ] [                on ]
+patch subdividing    [                on ] [                on ]
+chop value           [            64.000 ] [            64.000 ]
+texchop value        [            32.000 ] [            32.000 ]
+
+global fade          [             1.000 ] [             1.000 ]
+global falloff       [                 2 ] [                 2 ]
+global light scale   [ 1.000 1.000 1.000 ] [ 1.000 1.000 1.000 ]
+global gamma         [ 0.500 0.500 0.500 ] [ 0.500 0.500 0.500 ]
+global light scale   [             1.000 ] [             1.000 ]
+global sky diffusion [             1.000 ] [             1.000 ]
+
+opaque entities      [                on ] [                on ]
+sky lighting fix     [                on ] [                on ]
+incremental          [               off ] [               off ]
+dump                 [               off ] [               off ]
+
+colour jitter        [       0.0 0.0 0.0 ] [       0.0 0.0 0.0 ]
+monochromatic jitter [       0.0 0.0 0.0 ] [       0.0 0.0 0.0 ]
+softlight hack       [   0.0 0.0 0.0 0.0 ] [   0.0 0.0 0.0 0.0 ]
+diffuse hack         [                on ] [                on ]
+spotlight points     [                on ] [                on ]
+
+custom shadows with bounce light
+                     [               off ] [               off ]
+rgb transfers        [               off ] [               off ]
+
+
+[Reading texlights from 'D:\ValveHammerEditor35\tools\lights.rad']
+[59 texlights parsed from 'D:\ValveHammerEditor35\tools\lights.rad']
+
+13064 faces
+Create Patches : 32327 base patches
+0 opaque faces
+211726 square feet [30488596.00 square inches]
+83 direct lights
+
+BuildFacelights:
+ (4.38 seconds)
+visibility matrix   :  62.3 megs
+BuildVisLeafs:
+ (4.68 seconds)
+MakeScales:
+ (1.05 seconds)
+SwapTransfers:
+ (0.70 seconds)
+Transfer Lists :    53162162 :   53.16M transfers
+       Indices :    38305692 :   36.53M bytes
+          Data :   212648648 :  202.80M bytes
+GatherLight:
+ (0.14 seconds)
+FinalLightFace:
+ (0.11 seconds)
+11.24 seconds elapsed
 
 -----   END   hlrad -----
 
