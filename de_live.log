@@ -36,13 +36,13 @@ Using mapfile wad configuration
 Wadinclude list :
 [zhlt.wad]
 
-62 brushes (totalling 434 sides) discarded from clipping hulls
+54 brushes (totalling 378 sides) discarded from clipping hulls
 CreateBrush:
- (0.06 seconds)
+ (0.05 seconds)
 SetModelCenters:
  (0.00 seconds)
 CSGBrush:
- (0.13 seconds)
+ (0.15 seconds)
 
 Using Wadfile: \steamlibrary\steamapps\common\half-life\cstrike\cached.wad
  - Contains 0 used textures, 0.00 percent of map (2 textures in wad)
@@ -61,7 +61,7 @@ added 3 additional animating textures.
 Warning: ::FindTexture() texture MONSIDE not found!
 Warning: ::LoadLump() texture MONSIDE not found!
 Texture usage is at 0.39 mb (of 4.00 mb MAX)
-0.68 seconds elapsed
+0.66 seconds elapsed
 
 -----   END   hlcsg -----
 
@@ -96,12 +96,12 @@ subdivide size      [     240 ] [     240 ] (Min 64) (Max 512)
 max node size       [    1024 ] [    1024 ] (Min 64) (Max 8192)
 
 
-SolidBSP [hull 0] 500...1000...1500...2000...2160 (0.04 seconds)
+SolidBSP [hull 0] 500...1000...1500...2000...2069 (0.03 seconds)
 BSP generation successful, writing portal file 'd:\maps\de_live.prt'
-SolidBSP [hull 1] 500...1000...1159 (0.02 seconds)
-SolidBSP [hull 2] 500...1000...1164 (0.02 seconds)
-SolidBSP [hull 3] 500...1000...1216 (0.02 seconds)
-0.82 seconds elapsed
+SolidBSP [hull 1] 500...1000...1211 (0.02 seconds)
+SolidBSP [hull 2] 500...1000...1268 (0.02 seconds)
+SolidBSP [hull 3] 500...1000...1319 (0.02 seconds)
+0.71 seconds elapsed
 
 -----   END   hlbsp -----
 
@@ -114,8 +114,8 @@ Based on Valve's version, modified with permission.
 Submit detailed bug reports to (amckern@yahoo.com)
 -----  BEGIN  hlvis -----
 Command line: D:\ValveHammerEditor35\tools\hlvis.exe d:\maps\de_live 
-1225 portalleafs
-3411 numportals
+1198 portalleafs
+3290 numportals
 
 -= Current hlvis Settings =-
 Name               |  Setting  |  Default
@@ -135,12 +135,12 @@ full vis            [     off ] [     off ]
 
 
 BasePortalVis:
- (0.09 seconds)
+ (0.08 seconds)
 LeafThread:
- (19.39 seconds)
-average leafs visible: 433
-g_visdatasize:147434  compressed from 188650
-19.49 seconds elapsed
+ (13.63 seconds)
+average leafs visible: 385
+g_visdatasize:134865  compressed from 179700
+13.72 seconds elapsed
 
 -----   END   hlvis -----
 
@@ -212,29 +212,29 @@ rgb transfers        [               off ] [               off ]
 [Reading texlights from 'D:\ValveHammerEditor35\tools\lights.rad']
 [59 texlights parsed from 'D:\ValveHammerEditor35\tools\lights.rad']
 
-13064 faces
-Create Patches : 32327 base patches
+10807 faces
+Create Patches : 43853 base patches
 0 opaque faces
-211726 square feet [30488596.00 square inches]
-83 direct lights
+310129 square feet [44658648.00 square inches]
+111 direct lights
 
 BuildFacelights:
- (4.38 seconds)
-visibility matrix   :  62.3 megs
+ (2.54 seconds)
+visibility matrix   : 114.6 megs
 BuildVisLeafs:
- (4.68 seconds)
+ (6.67 seconds)
 MakeScales:
- (1.05 seconds)
+ (1.79 seconds)
 SwapTransfers:
- (0.70 seconds)
-Transfer Lists :    53162162 :   53.16M transfers
-       Indices :    38305692 :   36.53M bytes
-          Data :   212648648 :  202.80M bytes
+ (0.85 seconds)
+Transfer Lists :    70980942 :   70.98M transfers
+       Indices :    44301792 :   42.25M bytes
+          Data :   283923768 :  270.77M bytes
 GatherLight:
- (0.14 seconds)
+ (0.18 seconds)
 FinalLightFace:
- (0.11 seconds)
-11.24 seconds elapsed
+ (0.15 seconds)
+12.54 seconds elapsed
 
 -----   END   hlrad -----
 
